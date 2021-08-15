@@ -1,4 +1,5 @@
 class Test:
+    # class test
     def __init__(self):
         self.test = 'Mouse'
 
