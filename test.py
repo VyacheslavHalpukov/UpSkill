@@ -13,4 +13,4 @@ class Test:
 
 tes = Test()
 print(tes.print(1))
-print(Test.print_simple(1, 20))
+print(Test.print_simple(1, 200))
