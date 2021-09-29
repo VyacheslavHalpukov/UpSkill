@@ -3,19 +3,23 @@ for i in range(5):
 else:
     print('END')
 
+
 class One:
 
-    def sum(self,a,b):
-        return a+b
+    @classmethod
+    def sum(self, a, b):
+        return a + b
+
 
 class Two(One):
     pass
 
+
 o = One()
-b= Two()
+# b = Two()
 
-k = b.sum(2,3)
+k = Two.sum(2, 3)
 
-p = o.sum(1,2)
+p = One.sum(1, 2)
 
 print(p, k)
