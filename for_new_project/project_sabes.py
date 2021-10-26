@@ -1,8 +1,10 @@
-a = 'test'
+a = 1
 
-def b(b):
-    a = b
-    return a
+def b(a):
+    print(a)
+    a = 2
+    print(a)
 
-print(b(2))
-print(a[1])
+print(a)
+print(b(a))
+print(a)
