@@ -1,7 +1,7 @@
 def decoratora(foo):
     def wraper(*args):
         print('Before')
-        foo(args)
+        foo(*args)
         print('After')
     return wraper
 

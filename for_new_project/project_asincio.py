@@ -8,9 +8,12 @@ async def count_to_three():
     print("Веду отсчёт. 3")
     await asyncio.sleep(0)
 corout = count_to_three()
+# corout = count_to_three()
 
 while True:
     corout.send(None)
+
+# corout = count_to_three()
 
 # import asyncio
 #
