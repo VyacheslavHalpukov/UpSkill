@@ -4,7 +4,7 @@ class Test:
         self.test = 'Mouse'
         self.track = track
 
-    def print(self, num:int, eggs: str = 'eggs'):
+    def print_1(self, num: int, eggs: str = 'eggs'):
         return num
 
     @staticmethod
@@ -17,7 +17,7 @@ class Test:
 
 
 tes = Test(1)
-print(tes.print(1))
+print(tes.print_1(1))
 print(Test.print_simple(1, 200))
 
 class Test1(Test):
