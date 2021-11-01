@@ -1,6 +1,7 @@
 def solve(s):
-    dictionary = ['a', 'e', 'i', 'o', 'u']
+    dictionary = 'euioa'
     # 'y' is not from upper list
+    # cant change this string in dictionary and rutern in other
     long = 0
     tup_long = []
     for i,j in enumerate(s):
