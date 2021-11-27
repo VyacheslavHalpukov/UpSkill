@@ -5,12 +5,13 @@ class Celindr:
     def __init__(self, h, d, vt):
         self.circle = CircleSquare(h, d)
         self.segment = self.circle.square_segment()
+        self.circle_square = self.circle.square_circle()
         self.vt = vt
 
     # def return_del_segment(self):
     #     return self.segment
     def height_celindr(self):
-        height = self.vt/math.pi*self.circle.radius
+        height = self.vt/self.circle_square
         return height
 
 
@@ -24,6 +25,10 @@ class CircleSquare:
     def alfa(self):
         alfa = 2*math.acos(1-self.h/self.radius)
         return math.degrees(alfa), alfa
+
+    def square_circle(self):
+        square = math.pi * self.radius**2
+        return square
 
     def square_segment(self):
         alfa_deg, alfa_rad = self.alfa()
@@ -41,11 +46,12 @@ def tankvol(h, d, vt):
 # Pi * r**2 * h
 # This form volume
 # all screnshots in folder
-circle = CircleSquare(40, 120)
+circle = CircleSquare(5, 7)
 alfa_deg, alfa_rad = circle.alfa()
-square = circle.square_segment()
-print(alfa_deg, square)
+square_seg = circle.square_segment()
+square_full = circle.square_circle()
+print(alfa_deg, square_seg, square_full)
 
-celindr = Celindr(40, 120, 3500)
+celindr = Celindr(5, 7, 3848)
 ans = celindr.height_celindr()
-print(ans)
+print(ans * square_seg)
