@@ -20,4 +20,5 @@ ideal, len = obj.print_hw()
 
 print(fr_om)
 print(ideal, len)
+print(ideal)
 
