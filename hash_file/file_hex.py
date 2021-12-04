@@ -1,6 +1,6 @@
 int_a = 8
-hex_h = 'fda17ffe'
-int_b = int(hex_h, 16)
+hex_h = '00'
+int_b = int(hex_h, 16) + int('1')
 
 
 print(int_b)
