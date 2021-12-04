@@ -1,6 +1,6 @@
 import hashlib
 
-file = "ava.jpeg" # Location of the file (can be set a different way)
+file = "ava.txt" # Location of the file (can be set a different way)
 BLOCK_SIZE = 4 # The size of each read from the file
 
 file_hash = hashlib.sha256() # Create the hash object, can use something other than `.sha256()` if you wish
