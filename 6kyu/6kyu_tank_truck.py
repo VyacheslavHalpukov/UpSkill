@@ -9,7 +9,7 @@ class Celindr:
         self.vt = vt
 
     def height_celindr(self):
-        height = self.vt/self.circle_square
+        height = self.vt / self.circle_square
         return height
 
     def volume_segment(self):
@@ -22,29 +22,25 @@ class CircleSquare:
     def __init__(self, h, d):
         self.h = h
         self.d = d
-        self.radius = d/2
+        self.radius = d / 2
 
     def alfa(self):
-        alfa = 2*math.acos(1-self.h/self.radius)
+        alfa = 2 * math.acos(1 - self.h / self.radius)
         return math.degrees(alfa), alfa
 
     def square_circle(self):
-        square = math.pi * self.radius**2
+        square = math.pi * self.radius ** 2
         return square
 
     def square_segment(self):
         alfa_deg, alfa_rad = self.alfa()
-        square = 0.5 * self.radius**2 * (alfa_rad - math.sin(alfa_rad))
+        square = 0.5 * self.radius ** 2 * (alfa_rad - math.sin(alfa_rad))
         return square
-
-
 
 
 def tankvol(h, d, vt):
     volume_segment = Celindr(h, d, vt).volume_segment()
     return math.floor(volume_segment)
-
-
 
 
 # Pi * r**2 * h
