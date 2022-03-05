@@ -27,6 +27,6 @@ class Test1(Test):
         super().__init__(track)
 
 tes1 = Test1(12)
-print(Test1.print_simple(22, 44))
+print(Test1.print_simple(22, 66))
 
 print(tes1.print_track())
